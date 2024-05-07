@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glowing Circle Animation</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fffcfc;
+    overflow: hidden;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #00f; /* Initial color: Blue */
+    box-shadow: 0 0 10px 5px #00f; /* Initial glow color: Blue */
+    animation: glow 6s infinite alternate, pulse 3s infinite alternate;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      background-color: #00f; /* Initial color: Blue */
+      box-shadow: 0 0 10px 5px #00f; /* Initial glow color: Blue */
+    }
+    25% {
+      background-color: #0ff; /* Light Blue */
+      box-shadow: 0 0 20px 10px #0ff; /* Light Blue glow */
+    }
+    50% {
+      background-color: #f0f; /* Purple */
+      box-shadow: 0 0 30px 15px #f0f; /* Purple glow */
+    }
+    75% {
+      background-color: #8a2be2; /* Violet */
+      box-shadow: 0 0 40px 20px #8a2be2; /* Violet glow */
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5); /* Circle gets bigger */
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="circle"></div>
+</body>
+</html>
